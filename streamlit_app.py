@@ -113,7 +113,7 @@ st.header('GDP over time', divider='gray')
 st.line_chart(
     filtered_gdp_df,
     x='Year',
-    y='GDP',
+    y='GDP-TEST',
     color='Country Code',
 )
 
