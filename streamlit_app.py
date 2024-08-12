@@ -150,3 +150,33 @@ for i, country in enumerate(selected_countries):
             delta=growth,
             delta_color=delta_color
         )
+
+# Adding my own charts
+
+csv_data = """DATE,WAREHOUSE_NAME,TOTAL_CREDITS,FAILED_CREDITS
+2024-07-18,REPORTING,29.10,0.69
+2024-07-12,REPORTING,31.48,1.16
+2024-07-15,REPORTING,29.70,9.39
+2024-07-13,REPORTING,11.95,0.00
+2024-07-13,ANALYST,1.96,0.00
+2024-07-16,REPORTING,38.14,22.35
+2024-07-14,ANALYST,2.83,0.00
+2024-07-11,REPORTING,29.89,0.00
+2024-07-16,ANALYST,7.40,0.03
+2024-07-17,REPORTING,33.32,0.03
+2024-07-11,ANALYST,8.80,0.02
+2024-07-12,ANALYST,5.66,0.04
+2024-07-14,REPORTING,27.15,5.24
+2024-07-17,ANALYST,7.15,0.00
+2024-07-18,ANALYST,7.55,0.18
+2024-07-15,ANALYST,10.06,0.03
+"""
+
+# Use StringIO to create a file-like object from the string data
+csv_file_like = StringIO(csv_data)
+
+# Read the data into a DataFrame
+df = pd.read_csv(csv_file_like)
+
+# Display the DataFrame
+print(df)
