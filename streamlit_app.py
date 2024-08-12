@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import math
 from pathlib import Path
+from io import StringIO
 
 # Set the title and favicon that appear in the Browser's tab bar.
 
@@ -152,7 +153,6 @@ for i, country in enumerate(selected_countries):
         )
 
 # Adding my own charts
-
 csv_data = """DATE,WAREHOUSE_NAME,TOTAL_CREDITS,FAILED_CREDITS
 2024-07-18,REPORTING,29.10,0.69
 2024-07-12,REPORTING,31.48,1.16
