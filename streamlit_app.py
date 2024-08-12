@@ -179,4 +179,9 @@ csv_file_like = StringIO(csv_data)
 df = pd.read_csv(csv_file_like)
 
 # Display the DataFrame
-print(df)
+st.line_chart(
+    csv_file_like,
+    x='DATE',
+    y='TOTAL_CREDIT',
+    color='WAREHOUSE_NAME',
+)
